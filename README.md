@@ -6,7 +6,7 @@ This project is a Redis-like clone with a Command-Line Interface (CLI). It allow
 
 1. Clone the repository.
 
-2. Open the `redis.html` file in your web browser. The Redis Clone interface will appear.
+2. Open the `index.html` file in your web browser. The Redis Clone interface will appear.
 
 3. Enter your Redis-like commands in the CLI input field and press Enter to execute them.
 
