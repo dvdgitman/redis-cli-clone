@@ -1,46 +1,35 @@
 body {
-    font-family: 'Courier New', monospace;
-  }
-  
-  /* Styles for the CLI container */
+  font-family: 'Courier New', monospace;
+  background-color: black;
+  color: white;
+}
+
+/* Styles for the CLI container */
 .cli-container {
-    /* Add a border around the element */
-    border: 1px solid #ccc;
-    /* Add padding inside the element */
-    padding: 10px;
-    /* Set the width of the element */
-    width: 500px;
-    /* Center the element horizontally within its container */
-    margin: 20px auto;
-    /* Create slightly rounded corners for the border */
-    border-radius: 5px;
-  }
-  
-  /* Styles for the CLI input field */
-  .cli-input {
-    /* Set the width of the input field to fill the entire container */
-    width: 100%;
-    /* Remove the default border and outline styles */
-    border: none;
-    outline: none;
-    /* Set the background color of the input field to transparent */
-    background-color: transparent;
-    /* Set the text color for the input field */
-    color: #333;
-  }
-  
-  /* Styles for the CLI output area */
-  .cli-output {
-    /* Set a light background color for the output area */
-    background-color: #f2f2f2;
-    /* Add padding inside the output area */
-    padding: 10px;
-    /* Create some space between the input field and output area */
-    margin-top: 10px;
-    /* Create slightly rounded corners for the output area */
-    border-radius: 5px;
-    /* Allow line breaks in the output area to wrap the text */
-    white-space: pre-wrap;
-  }
-  
-  
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 500px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+/* Styles for the CLI output area */
+.cli-output {
+  background-color: #333;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  color: white;
+  overflow-y: scroll
+}
+
+/* Styles for the CLI input field */
+.cli-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
