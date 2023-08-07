@@ -1,0 +1,29 @@
+body {
+    font-family: 'Courier New', monospace;
+  }
+  
+  .cli-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 500px;
+    margin: 20px auto;
+    border-radius: 5px;
+  }
+  
+  .cli-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #333;
+  }
+  
+  .cli-output {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+  }
+  
