@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redis Clone</title>
+</head>
+<body>
+  <h1>Redis Clone</h1>
+  <div>
+    <!-- Input field and button for executing commands -->
+    <label for="command">Command:</label>
+    <input type="text" id="command" />
+    <!-- When the user clicks the "Execute" button on the page, this function is called. -->
+    <button onclick="executeCommand()">Execute</button>
+  </div>
+  <div>
+    <!-- Preformatted text area for displaying command output -->
+    <pre id="output"></pre>
+  </div>
+
+  <script>
+    // This is the main function responsible for executing the Redis-like commands.
+    function executeCommand() {
+      // Gets the value of the input field with the ID 'command' and removes any leading or trailing whitespace using trim()
+      const commandInput = document.getElementById('command').value.trim();
+      // Splits the input into parts using split(' '), so the individual command and arguments can be extracted.
+      const parts = commandInput.split(' ');
+      // Converts the command (the first part) to uppercase using toUpperCase(), as Redis commands are case-insensitive.
+      const command = parts[0].toUpperCase();
+      // This line extracts the second part of the input, which represents the key in the Redis command
+      const key = parts[1];
+      // This line extracts the third part of the input, which represents the value in the Redis command
+      const value = parts[2];
+      // switch statement that evaluates the value of the command variable and executes the corresponding function
+      switch (command) {
+        case 'SET':
+          setKeyValue(key, value);
+          break;
+        case 'GET':
+          getValue(key);
+          break;
+        case 'DEL':
+          deleteValue(key);
+          break;
+        case 'EXIST':
+          checkExistence(key);
+          break;
+        case 'KEYS':
+          getKeys();
+          break;
+        // If the command doesn't match any of the defined cases, an alert is shown with the message "Invalid command."
+        default:
+          alert('Invalid command.');
+      }
+    }
+
+    // Function to handle the SET command and store key-value pairs in local storage
+    function setKeyValue(key, value) {
+      localStorage.setItem(key, value);
+      displayOutput(`Key: ${key}, Value: ${value} saved successfully.`);
+    }
+
+    // Function to handle the GET command and retrieve values from local storage
+    function getValue(key) {
+      const value = localStorage.getItem(key);
+      displayOutput(`Key: ${key}, Value: ${value || 'not found'}.`);
+    }
+
+    // Function to handle the DEL command and remove key-value pairs from local storage
+    function deleteValue(key) {
+      localStorage.removeItem(key);
+      displayOutput(`Key: ${key} deleted successfully.`);
+    }
+
+    // Function to handle the EXIST command and check if a key exists in local storage
+    function checkExistence(key) {
+      const exists = localStorage.getItem(key) !== null;
+      displayOutput(`Key: ${key} ${exists ? 'exists.' : 'does not exist.'}`);
+    }
+
+    // Function to handle the KEYS command and retrieve all keys from local storage
+    function getKeys() {
+      const keys = Object.keys(localStorage);
+      displayOutput(`Keys: ${keys.join(', ')}`);
+    }
+
+    // Function to display output messages in the preformatted text area
+    function displayOutput(message) {
+      const output = document.getElementById('output');
+      output.textContent = message;
+    }
+  </script>
+</body>
+</html>
