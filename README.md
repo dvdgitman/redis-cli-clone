@@ -17,4 +17,4 @@ This project is a Redis-like clone with a Command-Line Interface (CLI). It allow
 ## Project Structure
 - `index.html`: The main HTML file containing the CLI.
 - `redis.js`: The JavaScript file with the main functions responsible for executing Redis-like commands.
-- `styles.css`: The CSS file with styles for the CLI interface.
+- `styles.css`: The CSS file with styles for the CLI.
