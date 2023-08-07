@@ -4,6 +4,7 @@ function executeCommand() {
     // Gets the value of the input field with the ID 'command' and removes any leading or trailing whitespace using trim()
     // allows you to access an element in the HTML document by its unique ID.
     const commandInput = document.getElementById('cliInput').value.trim();
+    document.getElementById('cliInput').value = '';
     // Splits the input into parts using split(' '), so the individual command and arguments can be extracted.
     const parts = commandInput.split(' ');
     // Converts the command (the first part) to uppercase using toUpperCase(), as Redis commands are case-insensitive.

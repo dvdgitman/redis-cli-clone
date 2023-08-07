@@ -20,6 +20,7 @@ body {
   margin-top: 10px;
   border-radius: 5px;
   white-space: pre-wrap;
+  background-color: transparent;
   color: white;
 }
 
