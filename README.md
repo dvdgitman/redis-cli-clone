@@ -15,6 +15,6 @@ This project is a Redis-like clone with a Command-Line Interface (CLI). It allow
 5. You can use commands like SET, GET, DEL, EXIST, and KEYS. The commands are case-insensitive.
 
 ## Project Structure
-
+- `index.html`: The main HTML file containing the CLI interface.
 - `redis.js`: The JavaScript file with the main functions responsible for executing Redis-like commands.
 - `styles.css`: The CSS file with styles for the CLI interface.
